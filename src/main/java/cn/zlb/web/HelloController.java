@@ -1,7 +1,7 @@
-package cn.tongdun.zlb.web;
+package cn.zlb.web;
 
-import cn.tongdun.zlb.bo.User;
-import cn.tongdun.zlb.service.HelloService;
+import cn.zlb.bo.User;
+import cn.zlb.service.HelloService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import org.slf4j.Logger;

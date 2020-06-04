@@ -1,4 +1,4 @@
-package cn.tongdun.zlb.bo;
+package cn.zlb.bo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

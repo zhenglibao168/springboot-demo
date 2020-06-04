@@ -1,4 +1,4 @@
-package cn.tongdun.zlb.service;
+package cn.zlb.service;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;

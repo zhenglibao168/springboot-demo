@@ -1,4 +1,4 @@
-package cn.tongdun.zlb;
+package cn.zlb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

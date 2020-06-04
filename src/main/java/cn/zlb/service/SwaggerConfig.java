@@ -1,4 +1,4 @@
-package cn.tongdun.zlb.service;
+package cn.zlb.service;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ public class SwaggerConfig {
     @Bean
     public Docket docket() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("cn.tongdun.zlb")).build();
+                .apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("cn.zlb")).build();
     }
 
     //配置文档信息
