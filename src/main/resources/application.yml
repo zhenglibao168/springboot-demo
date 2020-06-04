@@ -1,0 +1,8 @@
+server:
+  port: 8088
+mysql:
+  user:
+    name: zlb123
+    passwd: test123
+logging:
+  config: classpath:logback-spring.xml
