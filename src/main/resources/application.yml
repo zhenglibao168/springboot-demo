@@ -6,3 +6,6 @@ mysql:
     passwd: test123
 logging:
   config: classpath:logback-spring.xml
+spring:
+  activiti:
+    process-definition-location-prefix: classpath:processes
