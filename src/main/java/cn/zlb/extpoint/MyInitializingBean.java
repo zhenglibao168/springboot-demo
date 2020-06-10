@@ -4,7 +4,6 @@ import cn.zlb.service.HelloService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 @Configuration
@@ -23,11 +22,5 @@ public class MyInitializingBean implements InitializingBean {
     public MyInitializingBean() {
         System.out.println("MyInitializingBean构造方法");
         System.out.println(helloService);
-    }
-
-    @PostConstruct
-    private void init() {
-        System.out.println("@PostConstruct");
-        helloService.sayHello();
     }
 }

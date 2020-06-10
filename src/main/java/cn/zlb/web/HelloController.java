@@ -1,6 +1,8 @@
 package cn.zlb.web;
 
-import cn.zlb.bo.User;
+import cn.zlb.bo.StudentBO;
+import cn.zlb.bo.UserBO;
+import cn.zlb.dao.StudentMapper;
 import cn.zlb.service.HelloService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @Configuration
@@ -21,6 +24,8 @@ public class HelloController {
     private static final Logger LOG = LoggerFactory.getLogger(HelloController.class);
     @Resource
     private HelloService helloService;
+    @Resource
+    private StudentMapper studentMapper;
 
     @GetMapping("/hello")
     @ApiImplicitParams({
@@ -28,9 +33,14 @@ public class HelloController {
             @ApiImplicitParam(name = "mobile", value = "手机号码", defaultValue = "13688888888", required = true),
             @ApiImplicitParam(name = "email", value = "电子邮件", defaultValue = "zhenglibao@163.com", required = true)
     })
-    public User hello(@RequestParam String username, @RequestParam String mobile, @RequestParam String email) {
+    public UserBO hello(@RequestParam String username, @RequestParam String mobile, @RequestParam String email) {
         LOG.info("welcome to coming");
         helloService.sayHello();
-        return new User(1001L, username, mobile, email);
+        return new UserBO(1001L, username, mobile, email);
+    }
+
+    @GetMapping("/query")
+    public List<StudentBO> query() {
+        return studentMapper.getStudents();
     }
 }

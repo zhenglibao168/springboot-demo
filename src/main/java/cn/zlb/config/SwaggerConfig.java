@@ -1,4 +1,4 @@
-package cn.zlb.service;
+package cn.zlb.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
