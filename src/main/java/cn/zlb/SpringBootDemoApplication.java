@@ -2,6 +2,7 @@ package cn.zlb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * 默认扫描@SpringBootApplication主类的当前package的所有bean
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * SpringBootApplication注解等价于@Configuration @EnableAutoConfiguration @ComponentScan
  */
 @SpringBootApplication
+@ImportResource(locations = "classpath:bean.xml")
 public class SpringBootDemoApplication {
 
     public static void main(String[] args) {
