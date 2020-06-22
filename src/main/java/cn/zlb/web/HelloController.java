@@ -1,7 +1,7 @@
 package cn.zlb.web;
 
-import cn.zlb.bo.StudentBO;
-import cn.zlb.bo.UserBO;
+import cn.zlb.biz.StudentDO;
+import cn.zlb.biz.UserDO;
 import cn.zlb.dao.StudentMapper;
 import cn.zlb.service.HelloService;
 import io.swagger.annotations.ApiImplicitParam;
@@ -33,14 +33,14 @@ public class HelloController {
             @ApiImplicitParam(name = "mobile", value = "手机号码", defaultValue = "13688888888", required = true),
             @ApiImplicitParam(name = "email", value = "电子邮件", defaultValue = "zhenglibao@163.com", required = true)
     })
-    public UserBO hello(@RequestParam String username, @RequestParam String mobile, @RequestParam String email) {
+    public UserDO hello(@RequestParam String username, @RequestParam String mobile, @RequestParam String email) {
         LOG.info("welcome to coming");
         helloService.sayHello();
-        return new UserBO(1001L, username, mobile, email);
+        return new UserDO(1001L, username, mobile, email);
     }
 
     @GetMapping("/query")
-    public List<StudentBO> query() {
+    public List<StudentDO> query() {
         return studentMapper.getStudents();
     }
 }

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.zlb.dao.StudentMapper">
-    <resultMap id="StudentBO" type="cn.zlb.bo.StudentBO">
+    <resultMap id="StudentBO" type="cn.zlb.biz.StudentDO">
         <result property="id" column="id"/>
         <result property="studentName" column="student_name"/>
     </resultMap>
