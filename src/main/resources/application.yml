@@ -6,6 +6,9 @@ mysql:
     passwd: test123
 logging:
   config: classpath:logback-spring.xml
+#  打印sql
+  level:
+    cn.zlb.dao: trace
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -39,4 +42,4 @@ spring:
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  config-location: classpath:mybatis-config.xml
+#  config-location: classpath:mybatis-config.xml

@@ -22,14 +22,14 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         Contact contact = new Contact("zlb", "https://github.com/zlba111/springboot-demo", "zhenglibao8@163.com");
         return new ApiInfo(
-                "接口管理", // 标题
-                "http接口管理", // 描述
-                "v1.0", // 版本
-                "https://github.com/zlba111", // 组织链接
-                contact, // 联系人信息
-                "", // 许可
-                "", // 许可连接
-                new ArrayList<>()// 扩展
+                "接口管理",
+                "http接口管理",
+                "v1.0",
+                "https://github.com/zlba111",
+                contact,
+                "",
+                "",
+                new ArrayList<>()
         );
     }
 }

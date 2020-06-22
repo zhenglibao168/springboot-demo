@@ -1,6 +1,7 @@
 package cn.zlb.service;
 
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
