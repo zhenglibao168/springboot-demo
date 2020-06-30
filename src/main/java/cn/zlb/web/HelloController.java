@@ -3,6 +3,9 @@ package cn.zlb.web;
 import cn.zlb.biz.StudentDO;
 import cn.zlb.biz.UserDO;
 import cn.zlb.dao.StudentMapper;
+import cn.zlb.mapstruct.LoginBO;
+import cn.zlb.mapstruct.LoginDO;
+import cn.zlb.mapstruct.LoginMapper;
 import cn.zlb.service.HelloService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -26,6 +29,8 @@ public class HelloController {
     private HelloService helloService;
     @Resource
     private StudentMapper studentMapper;
+    @Resource
+    private LoginMapper loginMapper;
 
     @GetMapping("/hello")
     @ApiImplicitParams({
@@ -43,4 +48,11 @@ public class HelloController {
     public List<StudentDO> query() {
         return studentMapper.getStudents();
     }
+
+    @GetMapping("/mapstruct")
+    public LoginBO mapstructTest() {
+        return loginMapper.toLoginBO(new LoginDO(1001, "admin", "123456"));
+    }
+
+
 }

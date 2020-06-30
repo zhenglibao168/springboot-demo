@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ImportResource;
  * SpringBootApplication注解等价于@Configuration @EnableAutoConfiguration @ComponentScan
  */
 @SpringBootApplication
-@ImportResource(locations = "classpath:bean.xml")
+//@ImportResource(locations = "classpath:bean.xml")
 public class SpringBootDemoApplication {
 
     public static void main(String[] args) {
