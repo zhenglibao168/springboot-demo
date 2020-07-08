@@ -8,7 +8,7 @@ logging:
   config: classpath:logback-spring.xml
 #  打印sql
   level:
-    cn.zlb.dao: trace
+    cn.zlb.dao: info
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
