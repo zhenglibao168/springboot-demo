@@ -16,6 +16,8 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 /**
+ * 内建依赖
+ *
  * @author libao.zheng
  * @date 2020/7/8 2:46 下午
  */
