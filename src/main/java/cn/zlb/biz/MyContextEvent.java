@@ -1,11 +1,8 @@
 package cn.zlb.biz;
 
+import lombok.Data;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.ApplicationContextEvent;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
 
 
 /**
@@ -17,24 +14,18 @@ import javax.annotation.Resource;
 public class MyContextEvent extends ApplicationContextEvent {
     private String name;
     private String email;
+    private String publishSource;
 
 
-    public MyContextEvent(ApplicationContext source, String name, String email) {
+    public MyContextEvent(ApplicationContext source, String name, String email, String publishSource) {
         super(source);
         this.name = name;
         this.email = email;
+        this.publishSource = publishSource;
     }
 
-    public MyContextEvent(ApplicationContext source) {
-        super(source);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getEmail() {
-        return email;
+    public String getPublishSource() {
+        return publishSource;
     }
 
     @Override
@@ -42,6 +33,7 @@ public class MyContextEvent extends ApplicationContextEvent {
         return "MyContextEvent{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", publishSource='" + publishSource + '\'' +
                 '}';
     }
 }
