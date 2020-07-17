@@ -10,11 +10,10 @@ import java.util.concurrent.ConcurrentSkipListSet;
 
 @RestController
 public class TestController {
-    @Autowired
-    private HttpServletRequest request;
-
     // 存储已有参数，用于判断参数value是否重复，从而判断线程是否安全
     public static Set<String> set = new ConcurrentSkipListSet<>();
+    @Autowired
+    private HttpServletRequest request;
 
     @RequestMapping("/test")
     public void test() throws InterruptedException {

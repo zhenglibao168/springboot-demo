@@ -1,6 +1,5 @@
 package cn.zlb.biz;
 
-import lombok.Data;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.event.ApplicationContextEvent;
 

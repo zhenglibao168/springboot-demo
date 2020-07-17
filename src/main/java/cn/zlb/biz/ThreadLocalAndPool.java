@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadLocalAndPool {
     private static ThreadLocal<Integer> variableLocal = ThreadLocal.withInitial(() -> 0);
+
     public static void increment() {
         variableLocal.set(variableLocal.get() + 1);
     }
