@@ -1,4 +1,4 @@
-package cn.zlb.extpoint;
+package cn.zlb.biz.spring.extpoint;
 
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;

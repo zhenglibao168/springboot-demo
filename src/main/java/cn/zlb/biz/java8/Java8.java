@@ -1,4 +1,4 @@
-package cn.zlb.biz;
+package cn.zlb.biz.java8;
 
 import java.util.*;
 import java.util.stream.Collectors;

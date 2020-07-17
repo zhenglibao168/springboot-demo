@@ -1,4 +1,4 @@
-package cn.zlb.biz;
+package cn.zlb.biz.spring.event;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextStoppedEvent;

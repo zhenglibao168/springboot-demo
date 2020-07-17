@@ -1,4 +1,6 @@
-package cn.zlb.biz;
+package cn.zlb.biz.thread;
+
+import cn.zlb.biz.UserDO;
 
 /**
  * threadlocal测试

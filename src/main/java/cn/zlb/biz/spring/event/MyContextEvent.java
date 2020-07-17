@@ -1,4 +1,4 @@
-package cn.zlb.biz;
+package cn.zlb.biz.spring.event;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.event.ApplicationContextEvent;

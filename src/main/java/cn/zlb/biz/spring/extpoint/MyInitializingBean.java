@@ -1,4 +1,4 @@
-package cn.zlb.extpoint;
+package cn.zlb.biz.spring.extpoint;
 
 import cn.zlb.service.HelloService;
 import org.springframework.beans.BeansException;
