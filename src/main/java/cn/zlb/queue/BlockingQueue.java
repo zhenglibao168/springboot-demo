@@ -56,16 +56,16 @@ public class BlockingQueue {
     @Test
     public void testTake() throws InterruptedException {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-        System.out.println(blockingQueue.take());//返回元素
-        System.out.println(blockingQueue.take());//返回元素
+        System.out.println(blockingQueue.take());//获取并移除此队列的头
+        System.out.println(blockingQueue.take());//获取并移除此队列的头
         System.out.println(blockingQueue.take());//一直阻塞，直到队列非空
     }
 
     @Test
     public void testPeek() {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-        System.out.println(blockingQueue.peek());//返回第一个元素
-        System.out.println(blockingQueue.peek());//返回第一个元素
+        System.out.println(blockingQueue.peek());//返回但不移除队列的头
+        System.out.println(blockingQueue.peek());//返回但不移除队列的头
         blockingQueue.clear();
         System.out.println(blockingQueue.peek());//队列为空，返回null
     }
@@ -73,8 +73,8 @@ public class BlockingQueue {
     @Test
     public void testPoll() {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-        System.out.println(blockingQueue.poll());//返回元素
-        System.out.println(blockingQueue.poll());//返回元素
+        System.out.println(blockingQueue.poll());//获取并移除此队列的头
+        System.out.println(blockingQueue.poll());//获取并移除此队列的头
         blockingQueue.clear();
         System.out.println(blockingQueue.poll());//队列为空，返回null
     }
@@ -82,8 +82,8 @@ public class BlockingQueue {
     @Test
     public void testPollWithTimeout() throws InterruptedException {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-        System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//返回元素
-        System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//返回元素
+        System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//获取并移除此队列的头
+        System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//获取并移除此队列的头
         System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//等待1000ms，队列还是为空返回null
     }
 
