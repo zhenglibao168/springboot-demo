@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 阻塞队列
+ * 先进先出
  *
  * @author libao.zheng
  * @date 2020/7/21 1:47 下午
@@ -14,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class BlockingQueue {
     @Test
     public void testAdd() {
-        ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(2);
+        ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(2, true);
         System.out.println(blockingQueue.add(1));//返回true
         System.out.println(blockingQueue.add(2));//返回true
         System.out.println(blockingQueue.add(3));//抛异常 java.lang.IllegalStateException: Queue full
@@ -93,7 +94,7 @@ public class BlockingQueue {
      * @return 大小为2的阻塞队列
      */
     private ArrayBlockingQueue<Integer> createArrayBlockingQueue() {
-        ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(2);
+        ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(2, true);
         blockingQueue.add(1);
         blockingQueue.add(2);
         return blockingQueue;
