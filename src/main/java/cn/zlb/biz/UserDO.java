@@ -22,4 +22,5 @@ public class UserDO {
         this.mobile = mobile;
         this.email = email;
     }
+
 }
