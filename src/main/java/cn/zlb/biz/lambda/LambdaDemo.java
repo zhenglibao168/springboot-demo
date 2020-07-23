@@ -1,4 +1,4 @@
-package cn.zlb.biz.java8;
+package cn.zlb.biz.lambda;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
  * @author libao.zheng
  * @date 2020/7/8 3:31 下午
  */
-public class Java8 {
+public class LambdaDemo {
     public static void main(String[] args) {
 
 //************************* Map相关操作 *************************//
