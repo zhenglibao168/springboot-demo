@@ -1,8 +1,8 @@
 package cn.zlb.web;
 
-import cn.zlb.biz.MyFactoryBean;
-import cn.zlb.biz.MyObjectFactory;
-import cn.zlb.biz.MyObjectProvider;
+import cn.zlb.biz.spring.MyFactoryBean;
+import cn.zlb.biz.spring.MyObjectFactory;
+import cn.zlb.biz.spring.MyObjectProvider;
 import cn.zlb.biz.UserDO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

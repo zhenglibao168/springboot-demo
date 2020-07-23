@@ -1,5 +1,6 @@
-package cn.zlb.biz;
+package cn.zlb.biz.spring;
 
+import cn.zlb.biz.UserDO;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Component;
 
