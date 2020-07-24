@@ -4,7 +4,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
 
 /**
- * bean定义
+ * 注册普通bean
  *
  * @author libao.zheng
  * @date 2020/7/8 3:31 下午

@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
 
+/**
+ * bean后置处理器
+ */
 @Configuration
 public class MyInitializingBean implements InitializingBean, BeanPostProcessor, BeanFactoryAware {
     @Resource

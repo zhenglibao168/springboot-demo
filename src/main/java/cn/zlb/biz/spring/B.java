@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * B依赖A
+ *
  * @author libao.zheng
  * @date 2020/7/24 3:09 下午
  */
