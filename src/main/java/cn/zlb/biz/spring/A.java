@@ -1,24 +1,14 @@
 package cn.zlb.biz.spring;
 
-import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
-
 /**
- * A依赖B
+ * 实现类A继承AbstractDemo
  *
  * @author libao.zheng
- * @date 2020/7/24 3:08 下午
+ * @date 2020/7/27 8:49 上午
  */
-@Component
-public class A {
-    @Resource
-    private B b;
-
+public class A extends AbstractDemo {
     @Override
-    public String toString() {
-        return "A{" +
-                "b=" + b +
-                '}';
+    protected void run() {
+        System.out.println("A run");
     }
 }
