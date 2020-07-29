@@ -84,7 +84,7 @@ public class LambdaDemo {
         System.out.println("list 过滤后结果：");
         collect.forEach(item -> System.out.println("item=" + item));
 
-        //list元素排序
+        //list基本类型排序
         List<Integer> list2 = new ArrayList<>();
         list2.add(333);
         list2.add(222);
@@ -98,6 +98,8 @@ public class LambdaDemo {
         });
         System.out.println("list2 按升序排序结果：" + list2);
 
+
+        //list对象类型排序
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student(1, "test1", 15));
         students.add(new Student(2, "test1", 14));
