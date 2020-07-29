@@ -97,5 +97,28 @@ public class LambdaDemo {
             }
         });
         System.out.println("list2 按升序排序结果：" + list2);
+
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student(1, "test1", 15));
+        students.add(new Student(2, "test1", 14));
+        students.add(new Student(3, "test1", 20));
+        students.add(new Student(4, "test1", 18));
+        System.out.println("students排序前：" + students);
+        students.sort(new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getAge().compareTo(o2.getAge());
+            }
+        });
+        System.out.println("students按age升序排序后：" + students);
+
+
+        students.sort(new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o2.getAge().compareTo(o1.getAge());
+            }
+        });
+        System.out.println("students按age降序排序后：" + students);
     }
 }
