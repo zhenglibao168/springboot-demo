@@ -1,4 +1,4 @@
-package cn.zlb.biz.spring;
+package cn.zlb.biz.duotai;
 
 /**
  * 实现类A继承AbstractDemo

@@ -1,6 +1,6 @@
 package cn.zlb.web;
 
-import cn.zlb.biz.UserDO;
+import cn.zlb.biz.DO.UserDO;
 import cn.zlb.biz.spring.MyFactoryBean;
 import cn.zlb.biz.spring.MyObjectFactory;
 import cn.zlb.biz.spring.MyObjectProvider;

@@ -1,6 +1,4 @@
-package cn.zlb.biz;
-
-import cn.zlb.biz.spring.A;
+package cn.zlb.biz.duotai;
 
 /**
  * 实现类A继承实现类A

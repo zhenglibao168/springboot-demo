@@ -1,4 +1,4 @@
-package cn.zlb.biz;
+package cn.zlb.biz.DO;
 
 import lombok.Data;
 
