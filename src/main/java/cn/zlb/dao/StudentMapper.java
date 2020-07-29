@@ -1,6 +1,6 @@
 package cn.zlb.dao;
 
-import cn.zlb.biz.DO.StudentDO;
+import cn.zlb.biz.domain.StudentDO;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
 package cn.zlb.web;
 
-import cn.zlb.biz.DO.StudentDO;
-import cn.zlb.biz.DO.UserDO;
+import cn.zlb.biz.domain.StudentDO;
+import cn.zlb.biz.domain.UserDO;
 import cn.zlb.dao.StudentMapper;
 import cn.zlb.mapstruct.LoginBO;
 import cn.zlb.mapstruct.LoginDO;
