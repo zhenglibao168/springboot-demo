@@ -45,6 +45,7 @@ public class LambdaDemo {
         //遍历map所有元素
         System.out.println("map 遍历所有元素：");
         map.forEach((key, value) -> System.out.println(key + ":" + value));
+        map.forEach((key, value) -> System.out.println(key + ":" + value));
 
         //过滤map中符合条件的元素
         Stream<Map.Entry<String, Integer>> entryStream = map.entrySet().stream().filter(value -> {
