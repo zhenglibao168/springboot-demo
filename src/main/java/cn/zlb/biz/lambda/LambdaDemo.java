@@ -123,5 +123,44 @@ public class LambdaDemo {
             }
         });
         System.out.println("students按age降序排序后：" + students);
+
+        //List转数组
+        ArrayList<String> sourceList = new ArrayList<>();
+        sourceList.add("454");
+        sourceList.add("234");
+        sourceList.add("234");
+        sourceList.add("555");
+        System.out.println("List转数组前:");
+        for (String s : sourceList) {
+            System.out.println(s);
+        }
+
+        String[] descArray = sourceList.toArray(new String[0]);
+        System.out.println("List转数组后:");
+        for (String s : descArray) {
+            System.out.println(s);
+        }
+
+
+        //List排序并去重
+        List<String> aList = new ArrayList<>(Arrays.asList("aaa", "xyr", "xyr", "ddd", "aaa"));
+        System.out.println("List排序并去重前：");
+        for (String s : aList) {
+            System.out.println(s);
+        }
+
+        aList.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareToIgnoreCase(o2);
+            }
+        });
+        List<String> sortedList = new ArrayList<>(new LinkedHashSet<>(aList));
+        System.out.println("List排序并去重:");
+        for (String s : sortedList) {
+            System.out.println(s);
+        }
+
+
     }
 }
