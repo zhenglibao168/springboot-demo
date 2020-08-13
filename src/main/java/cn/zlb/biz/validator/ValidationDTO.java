@@ -8,21 +8,21 @@ import javax.validation.constraints.Pattern;
 import java.util.Set;
 
 /**
- * userdto
+ * 校验类
  *
  * @author libao.zheng
  * @date 2020/8/11 7:05 下午
  */
-public class UserDTO {
+public class ValidationDTO {
     @NotBlank(message = "姓名不能为空")
     private String name;
     @Pattern(regexp = "/^1[3-9]\\d{9}$/", message = "手机号码不合法")
     private String mobile;
 
-    public UserDTO() {
+    public ValidationDTO() {
     }
 
-    public UserDTO(String name, String mobile) {
+    public ValidationDTO(String name, String mobile) {
         this.name = name;
         this.mobile = mobile;
     }
@@ -45,7 +45,7 @@ public class UserDTO {
 
     public static void main(String[] args) {
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
-        Set<ConstraintViolation<UserDTO>> violationSet = validatorFactory.getValidator().validate(new UserDTO("", "123"));
+        Set<ConstraintViolation<ValidationDTO>> violationSet = validatorFactory.getValidator().validate(new ValidationDTO("", "123"));
         violationSet.forEach(userDTOConstraintViolation -> {
             System.out.println(userDTOConstraintViolation.getPropertyPath());
             System.out.println(userDTOConstraintViolation.getMessage());

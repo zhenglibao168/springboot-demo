@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListSet;
@@ -12,7 +13,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 public class TestController {
     // 存储已有参数，用于判断参数value是否重复，从而判断线程是否安全
     public static Set<String> set = new ConcurrentSkipListSet<>();
-    @Autowired
+    @Resource
     private HttpServletRequest request;
 
     @RequestMapping("/test")
