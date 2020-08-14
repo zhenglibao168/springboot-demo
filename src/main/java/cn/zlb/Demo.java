@@ -12,13 +12,13 @@ import java.util.List;
 public class Demo {
     public static List<String> getStrings() {
         List<String> list = new ArrayList<>();
-        list.add(PinYinUtil.getAllPinyin("王雷"));
-        list.add(PinYinUtil.getAllPinyin("张丽丽"));
-        list.add(PinYinUtil.getAllPinyin("张丽啊"));
-        list.add(PinYinUtil.getAllPinyin("a张丽丽"));
-        list.add(PinYinUtil.getAllPinyin("yao文雅"));
-        list.add(PinYinUtil.getAllPinyin("Test"));
-        list.add(PinYinUtil.getAllPinyin("test"));
+        list.add(PinYinUtil.getPinYin("王雷"));
+        list.add(PinYinUtil.getPinYin("张丽丽"));
+        list.add(PinYinUtil.getPinYin("张丽啊"));
+        list.add(PinYinUtil.getPinYin("a张丽丽"));
+        list.add(PinYinUtil.getPinYin("yao文雅"));
+        list.add(PinYinUtil.getPinYin("Test"));
+        list.add(PinYinUtil.getPinYin("test"));
         return list;
     }
 

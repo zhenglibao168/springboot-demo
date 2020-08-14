@@ -30,7 +30,7 @@ public class PinYinUtil {
         System.out.println(list);
     }
 
-    public static String getAllPinyin(String hanzi) {
+    public static String getPinYin(String hanzi) {
         //输出格式设置
         HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
         /**
