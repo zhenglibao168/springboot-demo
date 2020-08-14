@@ -17,7 +17,7 @@ import java.util.List;
  * @author libao.zheng
  * @date 2020/7/20 10:29 上午
  */
-public class DemoTest {
+public class PinYinUtil {
     @Test
     public void test() {
         List<String> list = Demo.getStrings();
