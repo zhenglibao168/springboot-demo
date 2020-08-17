@@ -45,7 +45,6 @@ public class LambdaDemo {
         //遍历map所有元素
         System.out.println("map 遍历所有元素：");
         map.forEach((key, value) -> System.out.println(key + ":" + value));
-        map.forEach((key, value) -> System.out.println(key + ":" + value));
 
         //过滤map中符合条件的元素
         Stream<Map.Entry<String, Integer>> entryStream = map.entrySet().stream().filter(value -> {
@@ -56,6 +55,50 @@ public class LambdaDemo {
         });
         System.out.println("map 过滤后结果：");
         entryStream.forEach(entry -> System.out.println(entry.getKey() + ":" + entry.getValue()));
+
+
+        //TreeMap/LinkedHashMap按key降序排序
+        Map<String, Integer> treeMap = new TreeMap<>();
+        treeMap.put("a", 3);
+        treeMap.put("c", 1);
+        treeMap.put("b", 2);
+        System.out.println("treeMap按key降序排序之前结果：");
+        treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
+        List<Map.Entry<String, Integer>> treeMapList = new ArrayList<>(treeMap.entrySet());
+        treeMapList.sort(new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return o2.getKey().compareTo(o1.getKey());
+            }
+        });
+        LinkedHashMap<String, Integer> newTreeMap = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> entry : treeMapList) {
+            newTreeMap.put(entry.getKey(), entry.getValue());
+        }
+
+        System.out.println("treeMap按key降序排序之后结果：");
+        newTreeMap.forEach((key, value) -> System.out.println(key + ":" + value));
+
+        //TreeMap/LinkedHashMap按value升序排序
+        Map<String, Integer> treeMap2 = new TreeMap<>();
+        treeMap2.put("aa", 22);
+        treeMap2.put("bb", 11);
+        treeMap2.put("cc", 33);
+        List<Map.Entry<String, Integer>> treeMapList2 = new ArrayList<>(treeMap2.entrySet());
+        treeMapList2.sort(new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return o1.getValue().compareTo(o2.getValue());
+            }
+        });
+        LinkedHashMap<String, Integer> newTreeMap2 = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> entry : treeMapList2) {
+            newTreeMap2.put(entry.getKey(), entry.getValue());
+        }
+
+        System.out.println("treeMap按value升序排序之后结果：");
+        newTreeMap2.forEach((key, value) -> System.out.println(key + ":" + value));
+
 
 //************************* List相关操作 *************************//
         List<String> list = new ArrayList<>();

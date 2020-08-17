@@ -1,9 +1,8 @@
 package cn.zlb;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * demo
@@ -25,7 +24,6 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-        final boolean a = StringUtils.equalsIgnoreCase(null, null);
-        System.out.println(a);
+        System.out.println(UUID.randomUUID().toString().replace("-", ""));
     }
 }
