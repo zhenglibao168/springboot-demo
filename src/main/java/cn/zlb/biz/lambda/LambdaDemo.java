@@ -62,8 +62,6 @@ public class LambdaDemo {
         treeMap.put("a", 3);
         treeMap.put("c", 1);
         treeMap.put("b", 2);
-        System.out.println("treeMap按key降序排序之前结果：");
-        treeMap.forEach((key, value) -> System.out.println(key + ":" + value));
         List<Map.Entry<String, Integer>> treeMapList = new ArrayList<>(treeMap.entrySet());
         treeMapList.sort(new Comparator<Map.Entry<String, Integer>>() {
             @Override
@@ -149,7 +147,6 @@ public class LambdaDemo {
         students.add(new Student(2, "test1", 14));
         students.add(new Student(3, "test1", 20));
         students.add(new Student(4, "test1", 18));
-        System.out.println("students排序前：" + students);
         students.sort(new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
@@ -173,8 +170,6 @@ public class LambdaDemo {
         sourceList.add("234");
         sourceList.add("234");
         sourceList.add("555");
-        System.out.println("List转数组前:");
-        sourceList.forEach(System.out::println);
 
         String[] descArray = sourceList.toArray(new String[0]);
         System.out.println("List转数组后:");
@@ -185,9 +180,6 @@ public class LambdaDemo {
 
         //List排序并去重
         List<String> aList = new ArrayList<>(Arrays.asList("aaa", "xyr", "xyr", "ddd", "aaa"));
-        System.out.println("List排序并去重前：");
-        aList.forEach(System.out::println);
-
         aList.sort(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
