@@ -1,5 +1,7 @@
 package cn.zlb;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,14 +25,7 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("1");
-        list.add("12");
-        list.add("1333");
-        String[] arr = list.toArray(new String[0]);
-        for (String s : arr) {
-            System.out.println(s);
-        }
-
+        final boolean a = StringUtils.equalsIgnoreCase(null, null);
+        System.out.println(a);
     }
 }

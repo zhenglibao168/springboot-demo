@@ -154,7 +154,5 @@ public class LambdaDemo {
         List<String> sortedList = list.stream().distinct().collect(Collectors.toList());
         System.out.println("List排序并去重:");
         list.forEach(System.out::println);
-
-
     }
 }
