@@ -155,7 +155,7 @@ public class LambdaDemo {
                 return o1.compareToIgnoreCase(o2);
             }
         });
-        List<String> sortedList = new ArrayList<>(new LinkedHashSet<>(aList));
+        List<String> sortedList = list.stream().distinct().collect(Collectors.toList());
         System.out.println("List排序并去重:");
         for (String s : sortedList) {
             System.out.println(s);
