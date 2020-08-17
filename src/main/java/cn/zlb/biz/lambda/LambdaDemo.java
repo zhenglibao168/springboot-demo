@@ -131,9 +131,7 @@ public class LambdaDemo {
         sourceList.add("234");
         sourceList.add("555");
         System.out.println("List转数组前:");
-        for (String s : sourceList) {
-            System.out.println(s);
-        }
+        sourceList.forEach(System.out::println);
 
         String[] descArray = sourceList.toArray(new String[0]);
         System.out.println("List转数组后:");
@@ -145,9 +143,7 @@ public class LambdaDemo {
         //List排序并去重
         List<String> aList = new ArrayList<>(Arrays.asList("aaa", "xyr", "xyr", "ddd", "aaa"));
         System.out.println("List排序并去重前：");
-        for (String s : aList) {
-            System.out.println(s);
-        }
+        aList.forEach(System.out::println);
 
         aList.sort(new Comparator<String>() {
             @Override
@@ -157,9 +153,7 @@ public class LambdaDemo {
         });
         List<String> sortedList = list.stream().distinct().collect(Collectors.toList());
         System.out.println("List排序并去重:");
-        for (String s : sortedList) {
-            System.out.println(s);
-        }
+        list.forEach(System.out::println);
 
 
     }
