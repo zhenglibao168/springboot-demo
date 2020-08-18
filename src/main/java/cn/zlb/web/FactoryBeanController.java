@@ -10,10 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * beanFactory.registerResolvableDependency(ServletRequest.class, new RequestObjectFactory());
- * beanFactory.registerResolvableDependency(ServletResponse.class, new ResponseObjectFactory());
- * beanFactory.registerResolvableDependency(HttpSession.class, new SessionObjectFactory());
- * beanFactory.registerResolvableDependency(WebRequest.class, new WebRequestObjectFactory());
+ * 系统内置FactoryBean
+ * beanFactory.registerResolvableDependency(ServletRequest.class,newRequestObjectFactory());
+ * beanFactory.registerResolvableDependency(ServletResponse.class,newResponseObjectFactory());
+ * beanFactory.registerResolvableDependency(HttpSession.class,newSessionObjectFactory());
+ * beanFactory.registerResolvableDependency(WebRequest.class,newWebRequestObjectFactory());
  *
  * @author libao.zheng
  * @date 2020/7/23 10:19 上午
