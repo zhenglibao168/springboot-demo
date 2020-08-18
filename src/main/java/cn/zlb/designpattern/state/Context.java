@@ -1,5 +1,8 @@
 package cn.zlb.designpattern.state;
 
+/**
+ * 有订单状态的上下文，供客户端调用
+ */
 public class Context extends AbstractState {
 
     private State state;
