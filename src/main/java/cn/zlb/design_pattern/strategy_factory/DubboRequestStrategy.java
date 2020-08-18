@@ -1,4 +1,4 @@
-package cn.zlb.designpattern.strategy_factory;
+package cn.zlb.design_pattern.strategy_factory;
 
 import org.springframework.stereotype.Component;
 

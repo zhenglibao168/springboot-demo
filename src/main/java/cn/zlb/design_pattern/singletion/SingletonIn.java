@@ -1,4 +1,4 @@
-package cn.zlb.designpattern.singletion;
+package cn.zlb.design_pattern.singletion;
 
 import java.io.Serializable;
 

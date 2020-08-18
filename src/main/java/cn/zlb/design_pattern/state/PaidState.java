@@ -1,4 +1,4 @@
-package cn.zlb.designpattern.state;
+package cn.zlb.design_pattern.state;
 
 /**
  * 已付款状态

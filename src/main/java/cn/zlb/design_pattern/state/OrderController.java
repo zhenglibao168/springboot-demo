@@ -1,4 +1,4 @@
-package cn.zlb.designpattern.state;
+package cn.zlb.design_pattern.state;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

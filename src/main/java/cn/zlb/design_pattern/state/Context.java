@@ -1,4 +1,4 @@
-package cn.zlb.designpattern.state;
+package cn.zlb.design_pattern.state;
 
 /**
  * 有订单状态的上下文，供客户端调用
