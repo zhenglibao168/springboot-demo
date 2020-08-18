@@ -27,6 +27,15 @@ public class ValidationDTO {
         this.mobile = mobile;
     }
 
+    public static void main(String[] args) {
+        ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+        Set<ConstraintViolation<ValidationDTO>> violationSet = validatorFactory.getValidator().validate(new ValidationDTO("", "123"));
+        violationSet.forEach(userDTOConstraintViolation -> {
+            System.out.println(userDTOConstraintViolation.getPropertyPath());
+            System.out.println(userDTOConstraintViolation.getMessage());
+        });
+    }
+
     public String getName() {
         return name;
     }
@@ -41,14 +50,5 @@ public class ValidationDTO {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
-    }
-
-    public static void main(String[] args) {
-        ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
-        Set<ConstraintViolation<ValidationDTO>> violationSet = validatorFactory.getValidator().validate(new ValidationDTO("", "123"));
-        violationSet.forEach(userDTOConstraintViolation -> {
-            System.out.println(userDTOConstraintViolation.getPropertyPath());
-            System.out.println(userDTOConstraintViolation.getMessage());
-        });
     }
 }

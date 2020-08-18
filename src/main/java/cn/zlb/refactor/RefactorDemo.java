@@ -9,6 +9,11 @@ package cn.zlb.refactor;
 public class RefactorDemo {
     private String name;
 
+    public static void main(String[] args) {
+        RefactorDemo refactorDemo = new RefactorDemo();
+        System.out.println(refactorDemo.getAddress());
+    }
+
     public String getName() {
         return name;
     }
@@ -21,12 +26,6 @@ public class RefactorDemo {
         System.out.println("10086");
         return new HomeAddress();
     }
-
-    public static void main(String[] args) {
-        RefactorDemo refactorDemo = new RefactorDemo();
-        System.out.println(refactorDemo.getAddress());
-    }
-
 
     private class HomeAddress {
         private String homeAddress = "hangzhou";

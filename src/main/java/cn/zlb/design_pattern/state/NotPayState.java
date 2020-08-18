@@ -3,7 +3,7 @@ package cn.zlb.design_pattern.state;
 /***
  * 待付款状态
  */
-public class NotPayState extends AbstractState{
+public class NotPayState extends AbstractState {
 
 
     @Override

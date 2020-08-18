@@ -12,8 +12,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * DAO层单元测试
+ */
 @RunWith(SpringRunner.class)
-@MybatisTest
+//默认会回滚sql
+@MybatisTest()
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class StudentMapperTest {
     @Resource
@@ -35,7 +39,6 @@ public class StudentMapperTest {
     public void testInsert() {
         studentMapper.insert(new StudentDO(null, "zhenglibao"));
         StudentDO studentDO = studentMapper.selectOne(new StudentDO(null, "zhenglibao"));
-        Assert.assertNotNull(studentDO);
-
+        Assert.assertEquals("zhenglibao", studentDO.getStudentName());
     }
 }

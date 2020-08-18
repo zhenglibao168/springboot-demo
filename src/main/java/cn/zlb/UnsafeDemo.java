@@ -56,9 +56,6 @@ public class UnsafeDemo {
     static final Unsafe unsafe;
     //记录state在类TestUsafe中的偏移值
     static final long stateOffset;
-    //变量
-    public volatile long result = 0;
-    public int[] arr = {1, 2, 3, 4, 5, 6};
 
     static {
         try {
@@ -76,6 +73,10 @@ public class UnsafeDemo {
             throw new Error(e);
         }
     }
+
+    //变量
+    public volatile long result = 0;
+    public int[] arr = {1, 2, 3, 4, 5, 6};
 
     public static void main(String[] args) {
         UnsafeDemo testUnsafe = new UnsafeDemo();

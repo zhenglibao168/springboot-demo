@@ -11,12 +11,12 @@ public class SingletonIn implements Serializable {
         throw new RuntimeException("只能单例获取");
     }
 
-    private static class SingletonInHolder {
-        private static final SingletonIn singletonIn = new SingletonIn();
-    }
-
     public static SingletonIn getSingletonIn() {
         return SingletonInHolder.singletonIn;
+    }
+
+    public static void main(String[] args) {
+        SingletonIn singleton = getSingletonIn();
     }
 
     /**
@@ -28,7 +28,7 @@ public class SingletonIn implements Serializable {
         return getSingletonIn();
     }
 
-    public static void main(String[] args) {
-        SingletonIn singleton = getSingletonIn();
+    private static class SingletonInHolder {
+        private static final SingletonIn singletonIn = new SingletonIn();
     }
 }

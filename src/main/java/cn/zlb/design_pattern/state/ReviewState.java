@@ -15,5 +15,5 @@ public class ReviewState extends AbstractState {
     public String getCurrentState() {
         return StateEnum.REVIEWED.getValue();
     }
-    
+
 }

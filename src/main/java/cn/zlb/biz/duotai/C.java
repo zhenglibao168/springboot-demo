@@ -7,12 +7,12 @@ package cn.zlb.biz.duotai;
  * @date 2020/7/27 8:50 上午
  */
 public class C extends A {
+    public static void main(String[] args) {
+        new C().ccc();
+    }
+
     public void ccc() {
         //调用父类AbstractDemo的test()方法,父类test()方法会调用子类实现，即实现类A的run()方法
         test();
-    }
-
-    public static void main(String[] args) {
-        new C().ccc();
     }
 }

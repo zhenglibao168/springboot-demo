@@ -1,20 +1,13 @@
 package cn.zlb.biz.domain;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-
-@ApiModel("用户信息")
-@Data
 public class UserDO {
-    @ApiModelProperty(value = "身份证", position = 0, example = "342423198701017777")
-    private final Long id;
-    @ApiModelProperty(value = "姓名", position = 1, example = "张三")
-    private final String name;
-    @ApiModelProperty(value = "手机号码", position = 2, example = "13688881111")
-    private final String mobile;
-    @ApiModelProperty(value = "电子邮件", position = 3, example = "test123@qq.com")
-    private final String email;
+    private Long id;
+    private String name;
+    private String mobile;
+    private String email;
+
+    public UserDO() {
+    }
 
     public UserDO(Long id, String name, String mobile, String email) {
         this.id = id;
@@ -23,4 +16,45 @@ public class UserDO {
         this.email = email;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

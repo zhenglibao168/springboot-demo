@@ -18,18 +18,6 @@ import java.util.List;
  * @date 2020/7/20 10:29 上午
  */
 public class PinYinUtil {
-    @Test
-    public void test() {
-        List<String> list = Demo.getStrings();
-        list.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareToIgnoreCase(o2);
-            }
-        });
-        System.out.println(list);
-    }
-
     public static String getPinYin(String hanzi) {
         //输出格式设置
         HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
@@ -78,6 +66,18 @@ public class PinYinUtil {
         }
         System.out.println(pinYin.toString());
         return pinYin.toString();
+    }
+
+    @Test
+    public void test() {
+        List<String> list = Demo.getStrings();
+        list.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareToIgnoreCase(o2);
+            }
+        });
+        System.out.println(list);
     }
 
 }
