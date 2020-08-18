@@ -24,6 +24,19 @@ public class RequestStrategyFactory {
      * @return
      */
     public RequestStrategy getBy(String strategyType) {
-        return requestStrategyMap.get(strategyType);
+        if (validate(strategyType)) {
+            return requestStrategyMap.get(strategyType);
+        }
+        return requestStrategyMap.get(ProtocolConstant.HTTP_STRATEGY);
+    }
+
+    /**
+     * 验证协议合法性
+     *
+     * @param strategyType
+     * @return
+     */
+    private boolean validate(String strategyType) {
+        return ProtocolConstant.HTTP_STRATEGY.equals(strategyType) || ProtocolConstant.DUBBO_STRATEGY.equals(strategyType);
     }
 }
