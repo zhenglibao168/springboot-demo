@@ -24,7 +24,7 @@ public class RequestStrategyFactory {
      * @return
      */
     public RequestStrategy getBy(String strategyType) {
-        if (validate(strategyType)) {
+        if (validateProtocol(strategyType)) {
             return requestStrategyMap.get(strategyType);
         }
         return requestStrategyMap.get(ProtocolConstant.HTTP_STRATEGY);
@@ -36,7 +36,7 @@ public class RequestStrategyFactory {
      * @param strategyType
      * @return
      */
-    private boolean validate(String strategyType) {
+    private boolean validateProtocol(String strategyType) {
         return ProtocolConstant.HTTP_STRATEGY.equals(strategyType) || ProtocolConstant.DUBBO_STRATEGY.equals(strategyType);
     }
 }
