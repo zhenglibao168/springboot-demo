@@ -14,9 +14,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     #serverTimezone=UTC解决时区的报错
-    url: jdbc:mysql://10.57.31.161:3306/risk_science_qa?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: test#2019
+    url: jdbc:mysql://10.57.31.147:3306/aaa?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: tongdun
+    password: tongdun@150713
 
     #Spring Boot 默认是不注入这些属性值的，需要自己绑定
     #druid 数据源专有配置
