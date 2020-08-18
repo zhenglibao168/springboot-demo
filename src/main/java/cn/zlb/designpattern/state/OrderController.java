@@ -3,8 +3,6 @@ package cn.zlb.designpattern.state;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
-
 /**
  * 订单客户端
  *
@@ -13,17 +11,15 @@ import javax.annotation.Resource;
  */
 @RestController
 public class OrderController {
-    @Resource
-    private OrderContext orderContext;
-
-    @Resource
-    private UnPaidOrderState unPaidOrderState;
-
     @GetMapping("order")
     public void requestOrder() {
-        orderContext.setOrderState(unPaidOrderState);
-        orderContext.updateState();
-        orderContext.updateState();
-        orderContext.updateState();
+        Context context = new Context();
+        context.setState(new PublishState());
+        //publish --> not pay
+        context.acceptOrderEvent(context);
+        //not pay --> paid
+        context.payOrderEvent(context);
+        //失败
+        context.checkFailEvent(context);
     }
 }

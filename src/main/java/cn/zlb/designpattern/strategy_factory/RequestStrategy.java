@@ -1,4 +1,4 @@
-package cn.zlb.designpattern.strategy;
+package cn.zlb.designpattern.strategy_factory;
 
 /**
  * 请求策略接口
