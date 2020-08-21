@@ -21,7 +21,7 @@ public class RedisController {
     /**
      * 存储字符串
      */
-    @GetMapping("testRedis2")
+    @GetMapping("testRedisString")
     public Object testRedis2() {
         String key = "name";
         redisTemplate.opsForValue().set(key, "test");
@@ -31,7 +31,7 @@ public class RedisController {
     /**
      * 存储对象
      */
-    @GetMapping("testRedis")
+    @GetMapping("testRedisObject")
     public Object testRedis() {
         String key = "user1";
         redisTemplate.opsForValue().set(key, new UserDO(1L, "张三", "10086", "zhangsan@163.com"));
