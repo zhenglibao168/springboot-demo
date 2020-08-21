@@ -16,7 +16,7 @@ public class MapTest {
         map.put("jkd", new User(1003, "user3"));
         map.put("ajj", new User(1004, "user4"));
         for (User user : map.values()) {
-            System.out.println(user.getId());
+          // System.out.println(user.getId());
         }
 
         Collection<String> unmodifiableCollection = Collections.unmodifiableCollection(new ArrayList<>());

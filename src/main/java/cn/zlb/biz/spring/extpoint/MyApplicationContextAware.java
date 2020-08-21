@@ -15,6 +15,6 @@ import org.springframework.stereotype.Component;
 public class MyApplicationContextAware implements ApplicationContextAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("applicationContext=" + applicationContext.getApplicationName());
+      // System.out.println("applicationContext=" + applicationContext.getApplicationName());
     }
 }

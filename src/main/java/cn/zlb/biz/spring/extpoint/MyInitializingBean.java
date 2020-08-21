@@ -20,15 +20,15 @@ public class MyInitializingBean implements InitializingBean, BeanPostProcessor, 
     private BeanFactory beanFactory;
 
     public MyInitializingBean() {
-        System.out.println("MyInitializingBean构造方法");
-        System.out.println("helloService=" + helloService);
+      // System.out.println("MyInitializingBean构造方法");
+      // System.out.println("helloService=" + helloService);
     }
 
     @Override
     public void afterPropertiesSet() {
-        System.out.println("InitializingBean.afterPropertiesSet");
-        System.out.println(helloService);
-        System.out.println("beanFactory=" + beanFactory);
+      // System.out.println("InitializingBean.afterPropertiesSet");
+      // System.out.println(helloService);
+      // System.out.println("beanFactory=" + beanFactory);
     }
 
     @Override

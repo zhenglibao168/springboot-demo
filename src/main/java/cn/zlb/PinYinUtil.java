@@ -64,7 +64,7 @@ public class PinYinUtil {
         } catch (BadHanyuPinyinOutputFormatCombination badHanyuPinyinOutputFormatCombination) {
             badHanyuPinyinOutputFormatCombination.printStackTrace();
         }
-        System.out.println(pinYin.toString());
+      // System.out.println(pinYin.toString());
         return pinYin.toString();
     }
 
@@ -77,7 +77,7 @@ public class PinYinUtil {
                 return o1.compareToIgnoreCase(o2);
             }
         });
-        System.out.println(list);
+      // System.out.println(list);
     }
 
 }

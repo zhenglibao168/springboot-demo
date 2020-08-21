@@ -12,6 +12,6 @@ public class ThreadLocalDemo {
     public static void main(String[] args) {
         ThreadLocal<Object> threadLocal = new ThreadLocal<>();
         threadLocal.set(new UserDO(123L, "zlb", "136118889999", "zlb@163.com"));
-        System.out.println(threadLocal.get());
+      // System.out.println(threadLocal.get());
     }
 }

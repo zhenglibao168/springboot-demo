@@ -20,7 +20,7 @@ public class TestController {
         String value = request.getParameter("key");
         // 判断线程安全
         if (set.contains(value)) {
-            System.out.println(value + "\t重复出现，request并发不安全！");
+          // System.out.println(value + "\t重复出现，request并发不安全！");
         } else {
             set.add(value);
         }

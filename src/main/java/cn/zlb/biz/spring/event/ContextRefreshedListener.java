@@ -15,7 +15,7 @@ public class ContextRefreshedListener implements ApplicationListener<ContextRefr
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("context is refreshed!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("context is refreshed!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 }

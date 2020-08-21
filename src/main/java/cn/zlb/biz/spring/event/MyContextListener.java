@@ -24,7 +24,7 @@ public class MyContextListener implements ApplicationListener<MyContextEvent> {
 
     @Override
     public void onApplicationEvent(MyContextEvent event) {
-        System.out.println("自定义事件监听器MyContextListener,事件发布来源：" + event.getPublishSource());
-        System.out.println(event);
+      // System.out.println("自定义事件监听器MyContextListener,事件发布来源：" + event.getPublishSource());
+      // System.out.println(event);
     }
 }

@@ -19,6 +19,6 @@ public class ListDemo {
         List<String> linkedList = new LinkedList<>();
         List<String> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
         vector.add(null);
-        System.out.println(copyOnWriteArrayList);
+      // System.out.println(copyOnWriteArrayList);
     }
 }

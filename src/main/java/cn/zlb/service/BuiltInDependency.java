@@ -48,16 +48,16 @@ public class BuiltInDependency {
 
     @PostConstruct
     private void init() {
-        System.out.println(environment);
-        System.out.println(systemProperties);
-        System.out.println(systemEnvironment);
-        System.out.println(messageSource);
-        System.out.println(lifecycleProcessor);
-        System.out.println(applicationEventMulticaster);
-        System.out.println(configurationClassPostProcessor);
-        System.out.println(autowiredAnnotationBeanPostProcessor);
-        System.out.println(commonAnnotationBeanPostProcessor);
-        System.out.println(eventListenerMethodProcessor);
-        System.out.println(defaultEventListenerFactory);
+      // System.out.println(environment);
+      // System.out.println(systemProperties);
+      // System.out.println(systemEnvironment);
+      // System.out.println(messageSource);
+      // System.out.println(lifecycleProcessor);
+      // System.out.println(applicationEventMulticaster);
+      // System.out.println(configurationClassPostProcessor);
+      // System.out.println(autowiredAnnotationBeanPostProcessor);
+      // System.out.println(commonAnnotationBeanPostProcessor);
+      // System.out.println(eventListenerMethodProcessor);
+      // System.out.println(defaultEventListenerFactory);
     }
 }

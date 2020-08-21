@@ -14,6 +14,6 @@ public class ExpressionDemo {
         String expression = "(a <= 1 || b >= 10) && c == 0 && d < 60";
         Expression compiledExp = AviatorEvaluator.compile(expression);
         Boolean result = (Boolean) compiledExp.execute(compiledExp.newEnv("a", 10, "b", 9, "c", 0, "d", 10));
-        System.out.println(result);
+      // System.out.println(result);
     }
 }

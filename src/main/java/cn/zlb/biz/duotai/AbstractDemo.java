@@ -9,7 +9,7 @@ package cn.zlb.biz.duotai;
 public abstract class AbstractDemo {
     public void test() {
         run();
-        System.out.println("test method");
+      // System.out.println("test method");
     }
 
     protected abstract void run();

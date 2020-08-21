@@ -20,31 +20,31 @@ public class AnnotationListener {
     @EventListener
     @Order(1)
     public void onApplicationEvent(ContextStartedEvent event) {
-        System.out.println("annotation context is started!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("annotation context is started!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 
     @Async
     @EventListener
     @Order(2)
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("annotation context is refreshed!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("annotation context is refreshed!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 
     @Async
     @EventListener
     @Order(3)
     public void onApplicationEvent(ContextClosedEvent event) {
-        System.out.println("annotation context is closed!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("annotation context is closed!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 
     @Async
     @EventListener
     @Order(4)
     public void onApplicationEvent(ContextStoppedEvent event) {
-        System.out.println("annotation context is stopped!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("annotation context is stopped!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 }

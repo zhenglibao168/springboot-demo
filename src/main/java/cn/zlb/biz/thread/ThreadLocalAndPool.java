@@ -20,7 +20,7 @@ public class ThreadLocalAndPool {
                 int before = variableLocal.get();
                 increment();
                 int after = variableLocal.get();
-                System.out.println("threadid " + threadId + "  before " + before + ", after " + after);
+              // System.out.println("threadid " + threadId + "  before " + before + ", after " + after);
                 variableLocal.remove();
             });
         }

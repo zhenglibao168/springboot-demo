@@ -23,22 +23,22 @@ public class TypeDemo {
     public static void main(String[] args) throws NoSuchFieldException {
         //基本类型，byte short int long  double float char boolean
         Class<Integer> integerClass = int.class;
-        System.out.println("integerClass = " + integerClass);
+      // System.out.println("integerClass = " + integerClass);
 
         //泛型数组类型
         Class<int[]> aClass = int[].class;
-        System.out.println("aClass = " + aClass);
+      // System.out.println("aClass = " + aClass);
 
         //原始类型，类、枚举、数组、注解等
         Class<String> stringClass = String.class;
-        System.out.println("stringClass = " + stringClass);
+      // System.out.println("stringClass = " + stringClass);
 
         //参数化类型
         Method[] methods = TypeDemo.class.getDeclaredMethods();
         for (Method method : methods) {
             Class<?>[] parameterizedTypes = method.getParameterTypes();
             for (Class<?> parameterizedType : parameterizedTypes) {
-                System.out.println("parameterizedType = " + parameterizedType);
+              // System.out.println("parameterizedType = " + parameterizedType);
             }
 
         }
@@ -46,22 +46,22 @@ public class TypeDemo {
         //类型变量
         TypeVariable<Class<ArrayList>>[] typeVariables = ArrayList.class.getTypeParameters();
         for (TypeVariable<Class<ArrayList>> typeVariable : typeVariables) {
-            System.out.println("typeVariable = " + typeVariable);
+          // System.out.println("typeVariable = " + typeVariable);
         }
 
 
         //泛型类型
         Type genericSuperclass = ArrayList.class.getGenericSuperclass();
-        System.out.println("genericSuperclass = " + genericSuperclass);
+      // System.out.println("genericSuperclass = " + genericSuperclass);
 
         //Spring ResolvableType
         ResolvableType t = ResolvableType.forField(TypeDemo.class.getDeclaredField("myMap"));
-        System.out.println("t.getSuperType() = " + t.getSuperType());// AbstractMap<Integer, List<String>>
-        System.out.println("t.asMap() = " + t.asMap());// Map<Integer, List<String>>
-        System.out.println("t.getGeneric(0).resolve() = " + t.getGeneric(0).resolve());// Integer
-        System.out.println("t.getGeneric(1).resolve() = " + t.getGeneric(1).resolve());// List
-        System.out.println("t.getGeneric(1) = " + t.getGeneric(1));// List<String>
-        System.out.println("t.resolveGeneric(1, 0)t = " + t.resolveGeneric(1, 0));// String
+      // System.out.println("t.getSuperType() = " + t.getSuperType());// AbstractMap<Integer, List<String>>
+      // System.out.println("t.asMap() = " + t.asMap());// Map<Integer, List<String>>
+      // System.out.println("t.getGeneric(0).resolve() = " + t.getGeneric(0).resolve());// Integer
+      // System.out.println("t.getGeneric(1).resolve() = " + t.getGeneric(1).resolve());// List
+      // System.out.println("t.getGeneric(1) = " + t.getGeneric(1));// List<String>
+      // System.out.println("t.resolveGeneric(1, 0)t = " + t.resolveGeneric(1, 0));// String
 
     }
 

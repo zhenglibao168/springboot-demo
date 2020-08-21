@@ -15,7 +15,7 @@ public class ContextStoppedListener implements ApplicationListener<ContextStoppe
 
     @Override
     public void onApplicationEvent(ContextStoppedEvent event) {
-        System.out.println("context is stopped!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("context is stopped!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 }

@@ -9,6 +9,6 @@ package cn.zlb.biz.duotai;
 public class A extends AbstractDemo {
     @Override
     protected void run() {
-        System.out.println("A run");
+      // System.out.println("A run");
     }
 }

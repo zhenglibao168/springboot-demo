@@ -43,7 +43,7 @@ public class LambdaDemo {
         });
 
         //遍历map所有元素
-        System.out.println("map 遍历所有元素：");
+      // System.out.println("map 遍历所有元素：");
         map.forEach((key, value) -> System.out.println(key + ":" + value));
 
         //过滤map中符合条件的元素
@@ -53,7 +53,7 @@ public class LambdaDemo {
             }
             return true;
         });
-        System.out.println("map 过滤后结果：");
+      // System.out.println("map 过滤后结果：");
         entryStream.forEach(entry -> System.out.println(entry.getKey() + ":" + entry.getValue()));
 
 
@@ -74,7 +74,7 @@ public class LambdaDemo {
             newTreeMap.put(entry.getKey(), entry.getValue());
         }
 
-        System.out.println("treeMap按key降序排序之后结果：");
+      // System.out.println("treeMap按key降序排序之后结果：");
         newTreeMap.forEach((key, value) -> System.out.println(key + ":" + value));
 
         //TreeMap/LinkedHashMap按value升序排序
@@ -94,7 +94,7 @@ public class LambdaDemo {
             newTreeMap2.put(entry.getKey(), entry.getValue());
         }
 
-        System.out.println("treeMap按value升序排序之后结果：");
+      // System.out.println("treeMap按value升序排序之后结果：");
         newTreeMap2.forEach((key, value) -> System.out.println(key + ":" + value));
 
 
@@ -113,7 +113,7 @@ public class LambdaDemo {
         });
 
         //遍历list所有元素
-        System.out.println("list 遍历所有元素:");
+      // System.out.println("list 遍历所有元素:");
         list.forEach(item -> System.out.println("item=" + item));
 
         //过滤list中符合条件的元素，生成新list
@@ -123,7 +123,7 @@ public class LambdaDemo {
             }
             return false;
         }).collect(Collectors.toList());
-        System.out.println("list 过滤后结果：");
+      // System.out.println("list 过滤后结果：");
         collect.forEach(item -> System.out.println("item=" + item));
 
         //list基本类型排序
@@ -134,11 +134,11 @@ public class LambdaDemo {
         list2.sort(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                System.out.println("list2 比较元素大小:" + o1 + " vs " + o2);
+              // System.out.println("list2 比较元素大小:" + o1 + " vs " + o2);
                 return o1.compareTo(o2);
             }
         });
-        System.out.println("list2 按升序排序结果：" + list2);
+      // System.out.println("list2 按升序排序结果：" + list2);
 
 
         //list对象类型排序
@@ -153,7 +153,7 @@ public class LambdaDemo {
                 return o1.getAge().compareTo(o2.getAge());
             }
         });
-        System.out.println("students按age升序排序后：" + students);
+      // System.out.println("students按age升序排序后：" + students);
 
 
         students.sort(new Comparator<Student>() {
@@ -162,7 +162,7 @@ public class LambdaDemo {
                 return o2.getAge().compareTo(o1.getAge());
             }
         });
-        System.out.println("students按age降序排序后：" + students);
+      // System.out.println("students按age降序排序后：" + students);
 
         //List转数组
         ArrayList<String> sourceList = new ArrayList<>();
@@ -172,9 +172,9 @@ public class LambdaDemo {
         sourceList.add("555");
 
         String[] descArray = sourceList.toArray(new String[0]);
-        System.out.println("List转数组后:");
+      // System.out.println("List转数组后:");
         for (String s : descArray) {
-            System.out.println(s);
+          // System.out.println(s);
         }
 
 
@@ -187,7 +187,7 @@ public class LambdaDemo {
             }
         });
         List<String> sortedList = list.stream().distinct().collect(Collectors.toList());
-        System.out.println("List排序并去重:");
+      // System.out.println("List排序并去重:");
         list.forEach(System.out::println);
     }
 }

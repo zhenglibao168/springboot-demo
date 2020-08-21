@@ -11,7 +11,7 @@ public class RefactorDemo {
 
     public static void main(String[] args) {
         RefactorDemo refactorDemo = new RefactorDemo();
-        System.out.println(refactorDemo.getAddress());
+      // System.out.println(refactorDemo.getAddress());
     }
 
     public String getName() {
@@ -23,7 +23,7 @@ public class RefactorDemo {
     }
 
     public HomeAddress getAddress() {
-        System.out.println("10086");
+      // System.out.println("10086");
         return new HomeAddress();
     }
 

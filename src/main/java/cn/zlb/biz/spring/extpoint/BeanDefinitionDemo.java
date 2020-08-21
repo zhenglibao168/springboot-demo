@@ -17,7 +17,7 @@ public class BeanDefinitionDemo {
         AnnotatedBeanDefinitionReader beanDefinitionReader = new AnnotatedBeanDefinitionReader(beanFactory);
         beanDefinitionReader.register(BeanDefinitionDemo.class);
         BeanDefinitionDemo beanDefinitionDemo = beanFactory.getBean(BeanDefinitionDemo.class);
-        System.out.println(beanDefinitionDemo.age);
+      // System.out.println(beanDefinitionDemo.age);
     }
 
     @Override

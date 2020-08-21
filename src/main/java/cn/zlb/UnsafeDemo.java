@@ -67,9 +67,9 @@ public class UnsafeDemo {
             unsafe = (Unsafe) field.get(null);
             //获取state变量在类中的偏移值
             stateOffset = unsafe.objectFieldOffset(UnsafeDemo.class.getDeclaredField("result"));
-            System.out.println("stateOffset = " + stateOffset);
+          // System.out.println("stateOffset = " + stateOffset);
         } catch (Exception e) {
-            System.out.println(e.getLocalizedMessage());
+          // System.out.println(e.getLocalizedMessage());
             throw new Error(e);
         }
     }
@@ -84,21 +84,21 @@ public class UnsafeDemo {
         for (int i = 0; i < 1000; i++) {
             unsafe.getAndAddLong(testUnsafe, stateOffset, 3L);
         }
-        System.out.println("testUnsafe.result = " + testUnsafe.result);
-        System.out.println(unsafe.arrayBaseOffset(testUnsafe.arr.getClass()));
-        System.out.println(unsafe.arrayIndexScale(testUnsafe.arr.getClass()));
-        System.out.println(unsafe.compareAndSwapLong(testUnsafe, stateOffset, 3000, 4000));
-        System.out.println(unsafe.getLongVolatile(testUnsafe, stateOffset));
+      // System.out.println("testUnsafe.result = " + testUnsafe.result);
+      // System.out.println(unsafe.arrayBaseOffset(testUnsafe.arr.getClass()));
+      // System.out.println(unsafe.arrayIndexScale(testUnsafe.arr.getClass()));
+      // System.out.println(unsafe.compareAndSwapLong(testUnsafe, stateOffset, 3000, 4000));
+      // System.out.println(unsafe.getLongVolatile(testUnsafe, stateOffset));
         unsafe.putLongVolatile(testUnsafe, stateOffset, 5000);
-        System.out.println(testUnsafe.result);
+      // System.out.println(testUnsafe.result);
         unsafe.putOrderedLong(testUnsafe, stateOffset, 5500);
-        System.out.println(testUnsafe.result);
+      // System.out.println(testUnsafe.result);
         Thread thread1 = new Thread(() -> {
-            System.out.println("线程1开始沉睡");
+          // System.out.println("线程1开始沉睡");
             long start = System.currentTimeMillis();
             long end = System.currentTimeMillis() + 8000;
             unsafe.park(true, end);
-            System.out.println("主线程在" + (System.currentTimeMillis() - start) + "ms后被线程2唤醒");
+          // System.out.println("主线程在" + (System.currentTimeMillis() - start) + "ms后被线程2唤醒");
         });
         Thread thread2 = new Thread(() -> {
             try {

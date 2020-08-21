@@ -52,9 +52,9 @@ public class HelloService {
     }
 
     public void sayHello() {
-        System.out.println("=====================hello=====================");
-        System.out.println("appName=" + appName);
-        System.out.println("name=" + name);
-        System.out.println("passwd=" + passwd);
+      // System.out.println("=====================hello=====================");
+      // System.out.println("appName=" + appName);
+      // System.out.println("name=" + name);
+      // System.out.println("passwd=" + passwd);
     }
 }

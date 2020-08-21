@@ -31,8 +31,8 @@ public class ValidationDTO {
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
         Set<ConstraintViolation<ValidationDTO>> violationSet = validatorFactory.getValidator().validate(new ValidationDTO("", "123"));
         violationSet.forEach(userDTOConstraintViolation -> {
-            System.out.println(userDTOConstraintViolation.getPropertyPath());
-            System.out.println(userDTOConstraintViolation.getMessage());
+          // System.out.println(userDTOConstraintViolation.getPropertyPath());
+          // System.out.println(userDTOConstraintViolation.getMessage());
         });
     }
 

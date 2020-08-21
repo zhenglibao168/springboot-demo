@@ -65,7 +65,7 @@ public class Context extends AbstractState {
 
     @Override
     public String getCurrentState() {
-        System.out.println("当前状态 : " + state.getCurrentState());
+      // System.out.println("当前状态 : " + state.getCurrentState());
         return state.getCurrentState();
     }
 }

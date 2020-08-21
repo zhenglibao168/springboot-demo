@@ -15,7 +15,7 @@ public class ContextClosedListener implements ApplicationListener<ContextClosedE
 
     @Override
     public void onApplicationEvent(ContextClosedEvent event) {
-        System.out.println("context is closed!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("context is closed!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 }

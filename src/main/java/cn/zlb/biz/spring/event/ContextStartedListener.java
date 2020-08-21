@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class ContextStartedListener implements ApplicationListener<ContextStartedEvent> {
     @Override
     public void onApplicationEvent(ContextStartedEvent event) {
-        System.out.println("context is started!");
-        System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
+      // System.out.println("context is started!");
+      // System.out.println("beanDefinition数量：" + event.getApplicationContext().getBeanDefinitionCount());
     }
 }
