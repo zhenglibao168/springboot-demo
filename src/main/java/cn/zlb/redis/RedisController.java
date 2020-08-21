@@ -1,7 +1,6 @@
 package cn.zlb.redis;
 
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,13 +15,12 @@ import javax.annotation.Resource;
 @RestController
 public class RedisController {
     @Resource
-    private RedisTemplate<String, String> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @GetMapping("testRedis")
-    public String testRedis() {
+    public Object testRedis() {
         String key = "name";
-        ValueOperations<String, String> valueOperations = redisTemplate.opsForValue();
-        valueOperations.set(key, "zhenglibao");
-        return valueOperations.get(key);
+        redisTemplate.opsForValue().set(key, "test");
+        return redisTemplate.opsForValue().get(key);
     }
 }

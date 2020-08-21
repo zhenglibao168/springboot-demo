@@ -29,7 +29,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     #serverTimezone=UTC解决时区的报错
-    url: jdbc:mysql://10.57.31.147:3306/aaa?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://10.57.31.147:3306/zlb_test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     username: tongdun
     password: tongdun@150713
 
