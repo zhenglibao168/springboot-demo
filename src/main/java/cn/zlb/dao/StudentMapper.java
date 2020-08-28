@@ -11,5 +11,7 @@ public interface StudentMapper {
 
     int insert(StudentDO studentDO);
 
+    int update(StudentDO studentDO);
+
     StudentDO selectOne(StudentDO studentDO);
 }

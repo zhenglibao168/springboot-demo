@@ -7,6 +7,14 @@ public class StudentDO {
     public StudentDO() {
     }
 
+    public StudentDO(Integer id) {
+        this.id = id;
+    }
+
+    public StudentDO(String studentName) {
+        this.studentName = studentName;
+    }
+
     public StudentDO(Integer id, String studentName) {
         this.id = id;
         this.studentName = studentName;

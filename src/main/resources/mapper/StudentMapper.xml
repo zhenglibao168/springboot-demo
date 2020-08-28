@@ -8,9 +8,14 @@
         <result property="id" column="id"/>
         <result property="studentName" column="student_name"/>
     </resultMap>
-    <insert id="insert">
+
+    <insert id="insert" parameterType="cn.zlb.biz.domain.StudentDO">
         insert into student(student_name) values(#{studentName})
     </insert>
+
+    <update id="update" parameterType="cn.zlb.biz.domain.StudentDO">
+        update student set student_name='test' where id=#{id}
+    </update>
     <!--    select默认开启一级缓存，分布式下容易产生脏数据，flushCache="true"关闭一级缓存-->
 
     <select id="getStudents" resultMap="StudentBO">
