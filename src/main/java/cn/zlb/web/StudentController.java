@@ -2,12 +2,12 @@ package cn.zlb.web;
 
 import cn.zlb.biz.domain.StudentDO;
 import cn.zlb.dao.StudentMapper;
-import cn.zlb.service.StudentService;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * student
@@ -16,19 +16,24 @@ import javax.annotation.Resource;
  * @date 2020/8/28 11:08 上午
  */
 @RestController
-@Transactional
 public class StudentController {
     @Resource
-    private StudentMapper studentMapper;
+    public StudentMapper studentMapper;
 
-    @Resource
-    private StudentService studentService;
-
+    /**
+     * 模拟死锁
+     *
+     * @return
+     */
     @GetMapping("/test")
-    public boolean test() {
+    @Transactional
+    public boolean test() throws InterruptedException {
         final StudentDO studentDO = new StudentDO("aaa");
         studentMapper.insert(studentDO);
-        studentService.updateStudent(studentMapper.selectOne(studentDO));
+        final StudentDO sd = studentMapper.selectOne(studentDO);
+//        studentMapper.update(sd);//不会产生死锁
+        new Thread(() -> studentMapper.update(sd)).start();
+        TimeUnit.HOURS.sleep(24);
         return true;
     }
 }

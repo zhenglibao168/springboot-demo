@@ -7,8 +7,6 @@ mysql:
 logging:
   config: classpath:logback-spring.xml
   #  打印sql
-  level:
-    cn.zlb.dao: info
 spring:
   redis:
     host: localhost
@@ -38,7 +36,7 @@ spring:
     initialSize: 5
     minIdle: 5
     maxActive: 20
-    maxWait: 60000
+    maxWait: 60000000000
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000
     validationQuery: SELECT 1 FROM DUAL
@@ -58,4 +56,6 @@ spring:
     active:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  #  config-location: classpath:mybatis-config.xml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #  config-location: classpath:mybatis-config.xml
