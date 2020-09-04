@@ -23,9 +23,10 @@ public class MyTest {
     private void listFile(File[] files) {
         for (File f : files) {
             if (f.isFile()) {
-                System.out.println(f.getName());
+                System.out.println(f.length() + " Byte " + f.getName());
                 fileCount++;
                 continue;
+
             }
             File[] fs = f.listFiles();
             if (fs != null && fs.length > 0) {
