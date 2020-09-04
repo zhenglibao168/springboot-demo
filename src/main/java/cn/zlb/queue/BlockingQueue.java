@@ -3,7 +3,6 @@ package cn.zlb.queue;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 阻塞队列
@@ -19,9 +18,9 @@ public class BlockingQueue {
     @Test
     public void testAdd() {
         ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(2, true);
-      // System.out.println(blockingQueue.add(1));//返回true
-      // System.out.println(blockingQueue.add(2));//返回true
-      // System.out.println(blockingQueue.add(3));//抛异常 java.lang.IllegalStateException: Queue full
+        // System.out.println(blockingQueue.add(1));//返回true
+        // System.out.println(blockingQueue.add(2));//返回true
+        // System.out.println(blockingQueue.add(3));//抛异常 java.lang.IllegalStateException: Queue full
     }
 
     /**
@@ -41,9 +40,9 @@ public class BlockingQueue {
     @Test
     public void testOffer() {
         ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(2);
-      // System.out.println(blockingQueue.offer(1));//返回true
-      // System.out.println(blockingQueue.offer(2));//返回true
-      // System.out.println(blockingQueue.offer(3));//插入失败返回false
+        // System.out.println(blockingQueue.offer(1));//返回true
+        // System.out.println(blockingQueue.offer(2));//返回true
+        // System.out.println(blockingQueue.offer(3));//插入失败返回false
     }
 
     /**
@@ -52,9 +51,9 @@ public class BlockingQueue {
     @Test
     public void testOfferWithTimeout() throws InterruptedException {
         ArrayBlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(2);
-      // System.out.println(blockingQueue.offer(1, 1000, TimeUnit.MILLISECONDS));//返回true
-      // System.out.println(blockingQueue.offer(2, 1000, TimeUnit.MILLISECONDS));//返回true
-      // System.out.println(blockingQueue.offer(3, 1000, TimeUnit.MILLISECONDS));//等待1000ms队列还是满的，返回false
+        // System.out.println(blockingQueue.offer(1, 1000, TimeUnit.MILLISECONDS));//返回true
+        // System.out.println(blockingQueue.offer(2, 1000, TimeUnit.MILLISECONDS));//返回true
+        // System.out.println(blockingQueue.offer(3, 1000, TimeUnit.MILLISECONDS));//等待1000ms队列还是满的，返回false
     }
 
     /**
@@ -63,10 +62,10 @@ public class BlockingQueue {
     @Test
     public void testRemove() {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-      // System.out.println(blockingQueue.remove(2));//返回true
-      // System.out.println(blockingQueue.remove(5));//元素不存在返回false
-      // System.out.println(blockingQueue.remove(1));//返回true
-      // System.out.println(blockingQueue.remove(3));//队列为空返回false
+        // System.out.println(blockingQueue.remove(2));//返回true
+        // System.out.println(blockingQueue.remove(5));//元素不存在返回false
+        // System.out.println(blockingQueue.remove(1));//返回true
+        // System.out.println(blockingQueue.remove(3));//队列为空返回false
     }
 
     /**
@@ -75,9 +74,9 @@ public class BlockingQueue {
     @Test
     public void testTake() throws InterruptedException {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-      // System.out.println(blockingQueue.take());//获取并移除此队列的头
-      // System.out.println(blockingQueue.take());//获取并移除此队列的头
-      // System.out.println(blockingQueue.take());//一直阻塞，直到队列非空
+        // System.out.println(blockingQueue.take());//获取并移除此队列的头
+        // System.out.println(blockingQueue.take());//获取并移除此队列的头
+        // System.out.println(blockingQueue.take());//一直阻塞，直到队列非空
     }
 
     /**
@@ -86,10 +85,10 @@ public class BlockingQueue {
     @Test
     public void testPeek() {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-      // System.out.println(blockingQueue.peek());//返回但不移除队列的头
-      // System.out.println(blockingQueue.peek());//返回但不移除队列的头
+        // System.out.println(blockingQueue.peek());//返回但不移除队列的头
+        // System.out.println(blockingQueue.peek());//返回但不移除队列的头
         blockingQueue.clear();
-      // System.out.println(blockingQueue.peek());//队列为空，返回null
+        // System.out.println(blockingQueue.peek());//队列为空，返回null
     }
 
     /**
@@ -98,10 +97,10 @@ public class BlockingQueue {
     @Test
     public void testPoll() {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-      // System.out.println(blockingQueue.poll());//获取并移除此队列的头
-      // System.out.println(blockingQueue.poll());//获取并移除此队列的头
+        // System.out.println(blockingQueue.poll());//获取并移除此队列的头
+        // System.out.println(blockingQueue.poll());//获取并移除此队列的头
         blockingQueue.clear();
-      // System.out.println(blockingQueue.poll());//队列为空，返回null
+        // System.out.println(blockingQueue.poll());//队列为空，返回null
     }
 
     /**
@@ -110,9 +109,9 @@ public class BlockingQueue {
     @Test
     public void testPollWithTimeout() throws InterruptedException {
         ArrayBlockingQueue<Integer> blockingQueue = createArrayBlockingQueue();
-      // System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//获取并移除此队列的头
-      // System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//获取并移除此队列的头
-      // System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//等待1000ms，队列还是为空返回null
+        // System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//获取并移除此队列的头
+        // System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//获取并移除此队列的头
+        // System.out.println(blockingQueue.poll(1000, TimeUnit.MILLISECONDS));//等待1000ms，队列还是为空返回null
     }
 
     /**

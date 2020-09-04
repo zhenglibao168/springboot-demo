@@ -2,7 +2,7 @@ package cn.zlb;
 
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
+import java.io.File;
 
 /**
  * 测试类
@@ -11,22 +11,26 @@ import java.util.ArrayList;
  * @date 2020/8/26 10:42 上午
  */
 public class MyTest {
+    private static int fileCount = 0;
+
     @Test
     public void test() {
-        ArrayList<Integer> list1 = new ArrayList<>();
-        int initialCapacity = 1000000;
-        ArrayList<Integer> list2 = new ArrayList<>(initialCapacity);
-        long begin1 = System.currentTimeMillis();
-        for (int i = 0; i < initialCapacity; i++) {
-            list1.add(1);
-        }
-        System.out.println("list1 cost time: " + (System.currentTimeMillis() - begin1));
+        File rootDir = new File("/Users/zlb/Downloads");
+        listFile(rootDir.listFiles());
+        System.out.println("file count=" + fileCount);
+    }
 
-
-        long begin2 = System.currentTimeMillis();
-        for (int i = 0; i < initialCapacity; i++) {
-            list2.add(1);
+    private void listFile(File[] files) {
+        for (File f : files) {
+            if (f.isFile()) {
+                System.out.println(f.getName());
+                fileCount++;
+                continue;
+            }
+            File[] fs = f.listFiles();
+            if (fs != null && fs.length > 0) {
+                listFile(fs);
+            }
         }
-        System.out.println("list2 cost time: " + (System.currentTimeMillis() - begin2));
     }
 }
