@@ -1,6 +1,7 @@
 # maven ignore
 target/
 *.jar
+.class
 !.mvn/wrapper/*
 *.war
 *.zip
