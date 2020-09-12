@@ -2,6 +2,7 @@ package cn.zlb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cglib.core.DebuggingClassWriter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -15,6 +16,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class SpringBootDemoApplication {
 
     public static void main(String[] args) {
+        //该设置用于输出jdk动态代理产生的类
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+        //该设置用于输出cglib动态代理产生的类
+//        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "cglib");
         SpringApplication.run(SpringBootDemoApplication.class, args);
     }
 }

@@ -1,5 +1,7 @@
 package cn.zlb.biz.spring.extpoint;
 
+import cn.zlb.service.ValidationService;
+import cn.zlb.web.ValidationController;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -15,6 +17,9 @@ import org.springframework.stereotype.Component;
 public class MyApplicationContextAware implements ApplicationContextAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-      // System.out.println("applicationContext=" + applicationContext.getApplicationName());
+        ValidationService validationService = applicationContext.getBean(ValidationService.class);
+        ValidationController validationController = applicationContext.getBean(ValidationController.class);
+        System.out.println("validationService = " + validationService.hashCode());
+        System.out.println("validationController = " + validationController.hashCode());
     }
 }
