@@ -1,5 +1,6 @@
 package cn.zlb.web;
 
+import cn.zlb.biz.spring.extpoint.MyApplicationContextAware;
 import cn.zlb.service.ValidationService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,9 @@ public class ValidationController {
     @Resource
     private ValidationService validationService;
 
+    @Resource
+    private MyApplicationContextAware myApplicationContextAware;
+
     @GetMapping("testPrivate")
     private String testPrivate() {
         validationService.test();
@@ -27,6 +31,8 @@ public class ValidationController {
 
     @GetMapping("testPublic")
     public String testPublic() {
+        ValidationController bean = myApplicationContextAware.getApplicationContext().getBean(ValidationController.class);
+        System.out.println(bean);
         validationService.test();
         return "testPublic";
     }
