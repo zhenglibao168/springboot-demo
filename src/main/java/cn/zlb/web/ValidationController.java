@@ -14,8 +14,8 @@ import javax.annotation.Resource;
  * 4、testPublic方法调用通过FastClass回调ValidationController对象，ValidationController对象是在bean初始化之后放在代理对象的callback里
  * 5、testPrivate方法调用通过反射调用ValidationController代理对象，报空指针异常
  * CglibAopProxy.getProxy方法调用ObjenesisCglibAopProxy.createProxyClassAndInstance方法
- * createProxyClassAndInstance方法调用SpringObjenesis.newInstance方法生成代理类对象ValidationController$$EnhancerBySpringCGLIB$$97f55215@54c1e5ca
- * 然而代理对象本身是没有覆盖父类private方法，因此调用的是父类ValidationController的testPrivate()方法，而代理对象属性ValidationService为null，所以执行validationService.test()报空指针异常
+ * createProxyClassAndInstance方法调用SpringObjenesis.newInstance方法生成代理对象ValidationController$$EnhancerBySpringCGLIB$$97f55215@54c1e5ca，不会生成ValidationController对象，代理对象拥有ValidationController的所有属性和方法,见下图
+ * 代理对象属性ValidationService为null，所以执行validationService.test()报空指针异常
  * 如何避免？把testPrivate方法的访问修饰符private改成public、protected其中一个或去掉private
  *
  * @author libao.zheng
