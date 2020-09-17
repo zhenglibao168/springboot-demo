@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 /**
- * 自定义钩子类
+ * 自定义钩子类,实现优雅停机
  * 关闭钩子在以下情景被调用：
  * 程序正常退出，即最后一个非守护线程结束时
  * 程序中执行到了System.exit()方法
