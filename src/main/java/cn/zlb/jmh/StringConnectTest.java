@@ -11,7 +11,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Throughput：整体吞吐量，每秒执行了多少次调用，单位为 ops/time
+ * Throughput：整体吞吐量，每单位时间执行了多少次调用，单位为 ops/time
  * AverageTime：用的平均时间，每次操作的平均时间，单位为 time/ops
  * SampleTime：随机取样，最后输出取样结果的分布
  * SingleShotTime：只运行一次，往往同时把 Warmup 次数设为 0，用于测试冷启动时的性能
@@ -50,7 +50,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 为统计结果的时间单位，可用于类或者方法注解
  */
-@OutputTimeUnit(TimeUnit.SECONDS)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class StringConnectTest {
     /**
      * 指定某项参数的多种情况，特别适合用来测试一个函数在不同的参数输入的情况下的性能，
@@ -80,7 +80,7 @@ public class StringConnectTest {
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
                 .include(StringConnectTest.class.getSimpleName())
-                .result("src/main/java/cn/zlb/jmh/result.json")
+                .result("result.json")//报告分析，http://deepoove.com/jmh-visual-chart/s
                 .resultFormat(ResultFormatType.JSON).build();
         new Runner(opt).run();
     }
