@@ -1,30 +1,26 @@
 package cn.zlb.biz.domain;
 
 public class StudentDO {
-    private Integer id;
+    private String id;
     private String studentName;
 
     public StudentDO() {
     }
 
-    public StudentDO(Integer id) {
+    public StudentDO(String id) {
         this.id = id;
     }
 
-    public StudentDO(String studentName) {
-        this.studentName = studentName;
-    }
-
-    public StudentDO(Integer id, String studentName) {
+    public StudentDO(String id, String studentName) {
         this.id = id;
         this.studentName = studentName;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

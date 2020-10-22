@@ -126,7 +126,7 @@ public class LambdaDemo {
             }
             return false;
         }).collect(Collectors.toList());
-        // System.out.println("data 过滤后结果：");
+         System.out.println("data 过滤后结果：");
         collect.forEach(item -> System.out.println("item=" + item));
 
         //list基本类型排序

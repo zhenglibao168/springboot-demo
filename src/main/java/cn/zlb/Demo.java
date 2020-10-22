@@ -2,7 +2,6 @@ package cn.zlb;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * demo
@@ -24,6 +23,19 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-      // System.out.println(UUID.randomUUID().toString().replace("-", ""));
+        List<Field> excel = new ArrayList<>();
+        excel.add(new Field("1", "aaa", "hangzhou"));
+        excel.add(new Field("2", "bbb", "hangzhou"));
+        excel.add(new Field("3", "ccc", "hangzhou"));
+
+        List<Field> db = new ArrayList<>();
+        db.add(new Field("2", "bbb", "hangzhou"));
+        db.add(new Field("3", "ccc", "hangzhou"));
+
+        excel.removeAll(db);
+        for (Field field : excel) {
+            System.out.println(field);
+        }
+
     }
 }

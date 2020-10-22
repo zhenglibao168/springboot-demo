@@ -31,7 +31,7 @@ public class StudentMapperTest {
 
     @Test
     public void testSelectOne() {
-        StudentDO studentDO = studentMapper.selectOne(new StudentDO(1, null));
+        StudentDO studentDO = studentMapper.selectOne(new StudentDO("1", null));
         Assert.assertEquals("Jame", studentDO.getStudentName());
     }
 
