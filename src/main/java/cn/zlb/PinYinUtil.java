@@ -68,16 +68,4 @@ public class PinYinUtil {
         return pinYin.toString();
     }
 
-    @Test
-    public void test() {
-        List<String> list = Demo.getStrings();
-        list.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareToIgnoreCase(o2);
-            }
-        });
-      // System.out.println(list);
-    }
-
 }

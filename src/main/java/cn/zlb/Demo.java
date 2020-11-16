@@ -2,6 +2,7 @@ package cn.zlb;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * demo
@@ -10,32 +11,38 @@ import java.util.List;
  * @date 2020/8/9 12:31 下午
  */
 public class Demo {
-    public static List<String> getStrings() {
-        List<String> list = new ArrayList<>();
-        list.add(PinYinUtil.getPinYin("王雷"));
-        list.add(PinYinUtil.getPinYin("张丽丽"));
-        list.add(PinYinUtil.getPinYin("张丽啊"));
-        list.add(PinYinUtil.getPinYin("a张丽丽"));
-        list.add(PinYinUtil.getPinYin("yao文雅"));
-        list.add(PinYinUtil.getPinYin("Test"));
-        list.add(PinYinUtil.getPinYin("test"));
-        return list;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Demo(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Demo{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     public static void main(String[] args) {
-        List<Field> excel = new ArrayList<>();
-        excel.add(new Field("1", "aaa", "hangzhou"));
-        excel.add(new Field("2", "bbb", "hangzhou"));
-        excel.add(new Field("3", "ccc", "hangzhou"));
-
-        List<Field> db = new ArrayList<>();
-        db.add(new Field("2", "bbb", "hangzhou"));
-        db.add(new Field("3", "ccc", "hangzhou"));
-
-        excel.removeAll(db);
-        for (Field field : excel) {
-            System.out.println(field);
-        }
+        List<Demo> list = new ArrayList<>();
+        List<Demo> list2 = new ArrayList<>();
+        list.add(new Demo("aa"));
+        list.add(new Demo("aa"));
+        list.add(new Demo("bb"));
+        list.add(new Demo("cc"));
+        list2.addAll(list.stream().filter(x -> "aa".equals(x.getName())).collect(Collectors.toList()));
+        list2.addAll(list.stream().filter(x -> "bb".equals(x.getName())).collect(Collectors.toList()));
+        list2.addAll(list.stream().filter(x -> "cc".equals(x.getName())).collect(Collectors.toList()));
+        System.out.println(list2);
 
     }
 }
