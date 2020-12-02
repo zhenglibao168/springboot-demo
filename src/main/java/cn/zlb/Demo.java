@@ -1,8 +1,6 @@
 package cn.zlb;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.math.BigDecimal;
 
 /**
  * demo
@@ -33,16 +31,14 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-        List<Demo> list = new ArrayList<>();
-        List<Demo> list2 = new ArrayList<>();
-        list.add(new Demo("aa"));
-        list.add(new Demo("aa"));
-        list.add(new Demo("bb"));
-        list.add(new Demo("cc"));
-        list2.addAll(list.stream().filter(x -> "aa".equals(x.getName())).collect(Collectors.toList()));
-        list2.addAll(list.stream().filter(x -> "bb".equals(x.getName())).collect(Collectors.toList()));
-        list2.addAll(list.stream().filter(x -> "cc".equals(x.getName())).collect(Collectors.toList()));
-        System.out.println(list2);
+        BigDecimal bigDecimal = new BigDecimal("34343.234567484155E8");
+        System.out.println(bigDecimal.toPlainString());
+        test(null);
 
+    }
+
+    private static void test(String name) {
+        name="null";
+        System.out.println(name);
     }
 }

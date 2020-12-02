@@ -2,7 +2,12 @@ package cn.zlb.collection;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 
@@ -26,7 +31,7 @@ public class MapDemo {
                 concurrentHashMap.put("key" + UUID.randomUUID().toString(), UUID.randomUUID().toString());
             }).start();
         }
-      // System.out.println("concurrentHashMap put total cost time:" + (System.currentTimeMillis() - startTime) + " ms");
+        // System.out.println("concurrentHashMap put total cost time:" + (System.currentTimeMillis() - startTime) + " ms");
 
         startTime = System.currentTimeMillis();
         for (int i = 0; i < 1000; i++) {
@@ -34,7 +39,7 @@ public class MapDemo {
                 concurrentHashMap.put("key" + UUID.randomUUID().toString(), UUID.randomUUID().toString());
             }).start();
         }
-      // System.out.println("concurrentSkipListMap put total cost time:" + (System.currentTimeMillis() - startTime) + " ms");
+        // System.out.println("concurrentSkipListMap put total cost time:" + (System.currentTimeMillis() - startTime) + " ms");
     }
 
 }
