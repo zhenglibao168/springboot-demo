@@ -1,7 +1,6 @@
 package cn.zlb;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.lang.management.ManagementFactory;
 
 /**
  * demo
@@ -11,8 +10,6 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Demo {
     public static void main(String[] args) {
-        Map<String, String> map = new ConcurrentHashMap<>();
-        map.put("1", "a");
-        map.get("1");
+        System.out.println(ManagementFactory.getRuntimeMXBean().getName());
     }
 }

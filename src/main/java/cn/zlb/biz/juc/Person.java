@@ -1,4 +1,4 @@
-package cn.zlb.concurrent;
+package cn.zlb.biz.juc;
 
 import java.io.Serializable;
 import java.util.Objects;
